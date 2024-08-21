@@ -1,0 +1,72 @@
+.sidebar{
+    height: 100vh;
+    background-color: aliceblue;
+    margin: 0%;
+    padding: 0;
+}
+.title{
+    text-align: center;
+    padding: .5rem;
+
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0%;
+    color:black;
+    padding: .2rem;
+    padding-left: 1rem;   
+}
+.menu li{
+    gap:.5rem;
+    padding: .5rem;
+    padding-left: .5rem;
+    color: rgb(57, 47, 47);
+    border-radius: 5px;
+    text-align: start;
+}
+.menu li:hover
+{
+    background-color: black;
+    color: white
+}
+.footermenu{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0%;
+    color:black;
+    padding: .2rem;
+    padding-left: 1rem; 
+}
+.footermenu li{
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap:.5rem;
+    padding: .5rem;
+    padding-left: .5rem;
+    color: rgb(57, 47, 47);
+    border-radius: 5px;
+    text-align: start;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.footermenu li:hover{
+    background-color: black;
+    color: white
+}
+.profile img{
+    border-radius: 50%;
+    height: 2px;
+    width: 2px;
+    background-image: url(https://cache.careers360.mobi/media/article_images/2021/7/27/best-professions-in-the-world.jpg);
+
+}
