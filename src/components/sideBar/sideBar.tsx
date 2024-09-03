@@ -1,13 +1,15 @@
-import  { FC } from 'react';
-import "./sideBar.css";
-import { RiDashboard2Fill } from "react-icons/ri";
-import { SlCalender } from "react-icons/sl";
-import { IoIosAnalytics } from "react-icons/io";
-import { IoMic } from "react-icons/io5";
+import { FC } from 'react';
+import './sidebar.css'
+import  UserButton  from '../userbutton/userbuttion';
+import { NavLink } from '@mantine/core';
+
+import { RiDashboard2Line } from "react-icons/ri";
+import { TbBrandBooking } from "react-icons/tb";
+import { AiTwotoneAudio } from "react-icons/ai";
+import { IoMdSettings } from "react-icons/io";
+import { MdOutlineSupportAgent } from "react-icons/md";
 import { BsTicketPerforatedFill } from "react-icons/bs";
-import { RiMoneyEuroCircleFill } from "react-icons/ri";
-import { IoSettingsSharp } from "react-icons/io5";
-import { BiSupport } from "react-icons/bi";
+
 
 interface SideBarProps {
   
@@ -15,35 +17,52 @@ interface SideBarProps {
 
 const SideBar: FC<SideBarProps> = ({}) => {
   return (
-    <>
-    <div className='sidebar'>
-        <div>
-        <h1 className='title'>PlAnIfY</h1>
-        </div>
+  <div className='sidebar'>
+    <div className='navbar'>
+    <NavLink
+        href="/dashboard"
+        label="Dashboard"
+        leftSection={<RiDashboard2Line />}
         
-        <ul className='menu'>
-            <li><RiDashboard2Fill /> Dashboard</li>
-            <li><SlCalender /> Talent Booking</li>
-            <li><IoIosAnalytics /> Auidience Analytics</li>
-            <li><IoMic /> Show Promotion</li>
-            <li><BsTicketPerforatedFill /> Ticketing and Reservation</li>
-            <li><RiMoneyEuroCircleFill /> financial Reporting</li>
-        </ul>
-      <div className='footer'>
-      <div className='footermenu'>
-            <li><IoSettingsSharp /> Settings</li>
-            <li> <BiSupport /> Support</li>
-        </div>
-        <div className='profile'>
-            <img src="https://cache.careers360.mobi/media/article_images/2021/7/27/best-professions-in-the-world.jpg" alt="" />
-            <p>NIKHIL</p>
-            <p>nikhilpkodannur@gmail.com</p>
-        </div>
-      </div>
-      
+      />
+      <NavLink
+      href="/booking"
+      label="Talent Booking"
+      leftSection={<TbBrandBooking />}
+    
+    />
+    <NavLink
+        href="/promotion"
+        label="Show Promotion"
+        leftSection={ <AiTwotoneAudio />}
+     
+      />
+      <NavLink
+        href="/ticketing"
+        label="Ticketing and Reservation"
+        leftSection={<BsTicketPerforatedFill />}
+       
+      />
     </div>
-      
-    </>
+    
+   
+      <div className="footer">
+      <div className='sub'>
+      <NavLink
+        href="/Settings"
+        label="Settings"
+        leftSection={<IoMdSettings />}
+      />
+      <NavLink
+        href="/support"
+        label="Support"
+        leftSection={<MdOutlineSupportAgent />}
+      />
+    </div>
+    <a href="/profile"> <UserButton/></a>
+     
+      </div>
+  </div>
   );
 };
 
