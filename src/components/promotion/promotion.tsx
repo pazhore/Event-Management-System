@@ -1,13 +1,17 @@
 import  { FC } from 'react';
+import Header from '../Header/header';
 
 interface Props {
   
 }
 
 const Promotion: FC<Props> = ({}) => {
+  const HandleClick=()=>{
+    console.log("onclick fun")
+  }
   return (
     <>
-  show promotion
+  <Header title='Show Promotion' subtitle='some text' buttons={['+ create Talent']} onClick={HandleClick} />
     </>
   );
 };

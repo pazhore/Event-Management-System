@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import './sidebar.css'
 import  UserButton  from '../userbutton/userbuttion';
-import { NavLink } from '@mantine/core';
+import { Divider, NavLink } from '@mantine/core';
 
 import { RiDashboard2Line } from "react-icons/ri";
 import { TbBrandBooking } from "react-icons/tb";
@@ -59,6 +59,7 @@ const SideBar: FC<SideBarProps> = ({}) => {
         leftSection={<MdOutlineSupportAgent />}
       />
     </div>
+    <Divider/>
     <a href="/profile"> <UserButton/></a>
      
       </div>

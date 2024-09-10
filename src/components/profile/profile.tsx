@@ -1,4 +1,5 @@
 import  { FC } from 'react';
+import Header from '../Header/header';
 
 interface ProfileProps {
   
@@ -7,7 +8,7 @@ interface ProfileProps {
 const Profile: FC<ProfileProps> = ({}) => {
   return (
     <>
-      profile
+        <Header title='Profile' subtitle='some text'  />
     </>
   );
 };

@@ -1,6 +1,9 @@
-import { Divider, Flex, Paper, Title } from '@mantine/core';
+
 import  { FC } from 'react';
 import { LuTv } from "react-icons/lu";
+import BoxContainer from '../boxcontainer/boxcontainet';
+import CardS from '../card/card';
+
 
 interface UpcomingshowsProps {
   
@@ -9,20 +12,9 @@ interface UpcomingshowsProps {
 const UpcomingShows: FC<UpcomingshowsProps> = ({}) => {
   return (
     <>
-     
-     <Paper shadow="xl" radius="md" p="xl">
-        <Flex>
-        <div> <LuTv /></div>
-        <Title order={4} pl={5}>Upcoming Shows</Title>
-        </Flex>
-        <Divider/>
-   
-    </Paper>
-      
-       
-    
-     
-  
+    <BoxContainer titleText={'Upcoming shows'} TitleComponent={<LuTv/>} cards={ <CardS/>}>
+
+    </BoxContainer>
     </>
   );
 };

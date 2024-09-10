@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Header from '../Header/header';
 
 interface SettingsProps {
   
@@ -7,7 +8,7 @@ interface SettingsProps {
 const Settings: FC<SettingsProps> = ({}) => {
   return (
     <>
-      settings
+      <Header title='Settings' subtitle='some text' />
     </>
   );
 };

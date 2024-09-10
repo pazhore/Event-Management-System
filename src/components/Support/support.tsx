@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Header from '../Header/header';
 
 interface SupportProps {
   
@@ -7,7 +8,7 @@ interface SupportProps {
 const Support: FC<SupportProps> = ({}) => {
   return (
     <>
-      support
+       <Header title='Support' subtitle='some text' />
     </>
   );
 };

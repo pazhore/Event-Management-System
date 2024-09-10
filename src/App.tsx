@@ -9,6 +9,7 @@ import Settings from './components/settings/settings.tsx';
 import Support from './components/Support/support.tsx';
 import Profile from './components/profile/profile.tsx';
 import AppShell from './components/AppShell/AppShell.tsx';
+import EventForm from './components/eventform/eventform.tsx';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/support" element={<Support />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/dashboard/eventform' element={<EventForm />} />
       </Routes>
     </AppShell>
   );

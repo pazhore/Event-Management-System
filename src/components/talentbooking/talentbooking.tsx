@@ -1,6 +1,6 @@
 import  { FC } from 'react';
 import Header from '../Header/header';
-import { Autocomplete, Button,  Grid,  } from '@mantine/core';
+import { Autocomplete,Grid} from '@mantine/core';
 import BookCard from '../bookcard/bookcard';
 
 interface TalentBookingProps {
@@ -16,26 +16,16 @@ const TalentBooking: FC<TalentBookingProps> = ({}) => {
        <>
       <Grid grow gutter="sm" >
         <Grid.Col span={12}  >
-          <Header />
+          <Header title='Talent Booking' subtitle='some text' buttons={['Bookings','Contracts']}/>          
         </Grid.Col>
         <Grid.Col span={8}  >
         <Autocomplete
-      
       placeholder="search"
       limit={5}
       data={largeData}
     />
     </Grid.Col>
-     
-   
-
-    <Grid.Col span={3}  m={5}  >
-
-    <Button variant="filled" size="md">Button</Button>
-</Grid.Col>
-
-<Grid.Col span={4}> 
-< BookCard/>
+    <Grid.Col span={3}  m={5}  >  
 </Grid.Col>
 <Grid.Col span={4}> 
 < BookCard/>
@@ -46,25 +36,9 @@ const TalentBooking: FC<TalentBookingProps> = ({}) => {
 <Grid.Col span={4}> 
 < BookCard/>
 </Grid.Col>
-<Grid.Col span={4}> 
-< BookCard/>
-</Grid.Col>
-<Grid.Col span={4}> 
-< BookCard/>
-</Grid.Col>
-
-
-     
-         
-          
-      
-
       </Grid>
-      {/* <Header/> */}
-    </>
-      
+    </>  
     </>
   );
 };
-
 export default TalentBooking;
