@@ -12,7 +12,7 @@ interface UpcomingshowsProps {
 const UpcomingShows: FC<UpcomingshowsProps> = ({}) => {
   return (
     <>
-    <BoxContainer titleText={'Upcoming shows'} TitleComponent={<LuTv/>} cards={ <CardS/>}>
+    <BoxContainer titleText={'Upcoming shows'} TitleComponent={<LuTv/>} cards={[<CardS/>]}>
 
     </BoxContainer>
     </>
